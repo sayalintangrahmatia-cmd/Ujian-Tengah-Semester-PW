@@ -1,0 +1,311 @@
+
+   /* GLOBAL */
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	scroll-behavior:smooth;
+}
+
+body{
+	font-family:'Poppins', sans-serif;
+	background:#f8f9ff;
+	color:#222;
+	line-height:1.7;
+}
+
+img{
+	max-width:100%;
+	border-radius:25px;
+	display:block;
+}
+
+
+   /* NAVBAR */
+nav{
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:1000;
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	padding:20px 8%;
+
+	background:rgba(255,255,255,0.9);
+	backdrop-filter:blur(10px);
+
+	box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav ul{
+	display:flex;
+	gap:35px;
+	list-style:none;
+}
+
+nav ul li a{
+	text-decoration:none;
+	color:#333;
+	font-size:15px;
+	font-weight:500;
+	transition:0.3s;
+	padding:8px 14px;
+	border-radius:20px;
+}
+
+nav ul li a:hover{
+	background:#c95700;
+	color:white;
+}
+
+
+   /* HEADER */
+header{
+	padding:170px 8% 100px;
+	min-height:100vh;
+
+	display:flex;
+	align-items:center;
+
+	background:#f8f9ff;
+}
+
+h1{
+	font-size:68px;
+	line-height:1.2;
+	font-weight:700;
+	margin-bottom:25px;
+	color:#222;
+}
+
+h2{
+	font-size:40px;
+	line-height:1.3;
+	font-weight:700;
+	margin-bottom:20px;
+	color:#222;
+}
+
+p{
+	font-size:16px;
+	color:#555;
+	line-height:1.9;
+}
+
+header ul{
+	margin:25px 0;
+}
+
+header ul li{
+	list-style:none;
+	margin-bottom:12px;
+	font-size:16px;
+	color:#555;
+}
+
+.intro-img{
+	width:100%;
+	max-width:420px;
+	margin:auto;
+
+	border-radius:30px;
+
+	box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+figcaption{
+	margin-top:12px;
+	font-size:13px;
+	color:#777;
+	text-align:center;
+}
+
+
+   /* BUTTON */
+.button{
+	display:inline-block;
+
+	padding:14px 30px;
+
+	background:#c95700;
+	color:white;
+
+	text-decoration:none;
+	font-weight:600;
+	font-size:15px;
+
+	border-radius:50px;
+
+	transition:0.3s;
+
+	box-shadow:0 8px 20px rgba(108,99,255,0.25);
+}
+
+.button:hover{
+	background:#c95700;
+	transform:translateY(-3px);
+	color:white;
+}
+
+
+   /* HOBI SECTION */
+.hobi-section{
+	padding:90px 8%;
+	background:white;
+}
+
+.section-title{
+	text-align:center;
+	margin-bottom:60px;
+}
+
+.hobi-card{
+	background:#eef1ff;
+
+	padding:35px 25px;
+
+	border-radius:25px;
+
+	text-align:center;
+
+	transition:0.3s;
+
+	height:100%;
+
+	box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.hobi-card:hover{
+	transform:translateY(-8px);
+}
+
+.hobi-icon{
+	font-size:45px;
+	margin-bottom:20px;
+}
+
+.hobi-card h3{
+	font-size:24px;
+	margin-bottom:15px;
+	color:#c95700;
+}
+
+.hobi-card p{
+	font-size:15px;
+	color:#555;
+	line-height:1.8;
+}
+
+
+   /* PROJECT SECTION */
+.project{
+	padding:90px 8%;
+}
+
+.project figure{
+	margin:0;
+}
+
+.project img{
+	box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.project p{
+	margin-bottom:25px;
+}
+
+.blue{
+	background:#eef1ff;
+}
+
+.right-alignment{
+	text-align:right;
+}
+
+
+   /* FOOTER */
+footer{
+	background:#1f1f1f;
+	color:white;
+
+	text-align:center;
+
+	padding:80px 8%;
+	margin-top:80px;
+}
+
+footer h2{
+	font-size:45px;
+	color:white;
+	margin-bottom:25px;
+}
+
+footer p{
+	color:#ccc;
+	margin-bottom:15px;
+}
+
+footer a{
+	color:#b9b6ff;
+	text-decoration:none;
+}
+
+footer a:hover{
+	text-decoration:underline;
+}
+
+
+   /* RESPONSIVE */
+@media(max-width:768px){
+
+	nav{
+		padding:18px 5%;
+	}
+
+	nav ul{
+		gap:15px;
+		flex-wrap:wrap;
+		justify-content:center;
+	}
+
+	nav ul li a{
+		font-size:13px;
+	}
+
+	header{
+		padding:150px 5% 70px;
+		text-align:center;
+	}
+
+	h1{
+		font-size:42px;
+	}
+
+	h2{
+		font-size:32px;
+	}
+
+	.project{
+		padding:70px 5%;
+	}
+
+	.right-alignment{
+		text-align:left;
+	}
+
+	.hobi-section{
+		padding:70px 5%;
+	}
+
+	footer{
+		padding:60px 5%;
+	}
+
+	footer h2{
+		font-size:35px;
+	}
+
+}
