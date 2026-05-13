@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Tersimpan | Lintang Rahmatia</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#f8f9ff;
+            color:#222;
+        }
+
+        nav{
+            width:100%;
+            padding:20px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:fixed;
+            top:0;
+            z-index:1000;
+            background:rgba(255,255,255,0.9);
+            backdrop-filter:blur(10px);
+            box-shadow:0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo{
+            font-size:22px;
+            font-weight:700;
+            color:#c95700;
+        }
+
+        nav ul{
+            display:flex;
+            gap:30px;
+            list-style:none;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:#333;
+            font-weight:500;
+        }
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:140px 8% 80px;
+        }
+
+        .card{
+            width:100%;
+            max-width:700px;
+            background:white;
+            padding:50px;
+            border-radius:30px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .card h1{
+            font-size:45px;
+            margin-bottom:15px;
+        }
+
+        .card p{
+            color:#666;
+            margin-bottom:30px;
+        }
+
+        .profil-item{
+            background:#eef1ff;
+            padding:20px;
+            border-radius:18px;
+            margin-bottom:18px;
+        }
+
+        .profil-item h3{
+            color:#c95700;
+            margin-bottom:8px;
+            font-size:18px;
+        }
+
+        .profil-item p{
+            margin:0;
+            color:#444;
+            line-height:1.7;
+        }
+
+        .button{
+            display:inline-block;
+            margin-top:20px;
+            padding:14px 28px;
+            background:#c95700;
+            color:white;
+            text-decoration:none;
+            border-radius:50px;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        .button:hover{
+            background:#c95700;
+        }
+
+        footer{
+            background:#1f1f1f;
+            color:white;
+            text-align:center;
+            padding:50px 8%;
+        }
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            nav ul{
+                gap:15px;
+                font-size:14px;
+            }
+
+            .card{
+                padding:35px 25px;
+            }
+
+            .card h1{
+                font-size:35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+
+        <div class="logo">
+            Lintang Portofolio
+        </div>
+
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Content -->
+    <section class="hero">
+
+        <div class="card">
+
+            <h1>Profil Tersimpan</h1>
+
+            <p>
+                Berikut data profil yang berhasil disimpan.
+            </p>
+
+            <div id="profilResult"></div>
+
+            <a href="profil.html" class="button">
+                Kembali ke Form
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Made with ❤️ by Lintang Rahmatia - 2026
+        </p>
+
+    </footer>
+
+    <!-- Script -->
+    <script>
+
+        const data = JSON.parse(localStorage.getItem("profilData"));
+
+        const result = document.getElementById("profilResult");
+
+        if(data){
+
+            result.innerHTML = `
+
+                <div class="profil-item">
+                    <h3>NIM</h3>
+                    <p>${data.nim}</p>
+                </div>
+
+                <div class="profil-item">
+                    <h3>Nama</h3>
+                    <p>${data.nama}</p>
+                </div>
+
+                <div class="profil-item">
+                    <h3>Alamat</h3>
+                    <p>${data.alamat}</p>
+                </div>
+
+                <div class="profil-item">
+                    <h3>Hobi</h3>
+                    <p>${data.hobi}</p>
+                </div>
+
+                <div class="profil-item">
+                    <h3>Instagram</h3>
+                    <p>${data.instagram}</p>
+                </div>
+
+            `;
+
+        }else{
+
+            result.innerHTML = `
+                <p>Data profil belum tersedia.</p>
+            `;
+
+        }
+
+    </script>
+
+</body>
+</html>
